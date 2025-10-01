@@ -1,7 +1,7 @@
 import React, { use } from "react";
 import { ChefHat, CookingPot, ScrollText, TicketCheck } from "lucide-react";
 
-const CurrentOrdersCard = ({ OrderJson, cardOrder }) => {
+const CurrentOrdersCard = ({ OrderJson, cardOrder,readyServe }) => {
   const orders = use(OrderJson);
 
   return (
@@ -29,7 +29,7 @@ const CurrentOrdersCard = ({ OrderJson, cardOrder }) => {
           <TicketCheck className="animate-pulse" color="#fcb700" size={100} />
           <div className="text-xl text-center">
             Ready To Serve
-            <h2 className="text-6xl font-bold">{}</h2>
+            <h2 className="text-6xl font-bold">{readyServe.length}</h2>
           </div>
         </div>
       </div>

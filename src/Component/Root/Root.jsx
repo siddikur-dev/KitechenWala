@@ -28,9 +28,11 @@ const Root = () => {
         <CurrentOrdersCard
           OrderJson={OrderJson}
           cardOrder={cardOrder}
+          readyServe={readyServe}
         ></CurrentOrdersCard>
       </div>
       <OrderCard
+      
         cardOrder={cardOrder}
         handleOrder={handleOrder}
         OrderJson={OrderJson}
