@@ -1,9 +1,9 @@
-import React from "react";
+import React, { use } from "react";
 import { ChefHat, CookingPot, ScrollText, TicketCheck } from "lucide-react";
 
-const CurrentOrdersCard = () => {
-  const totalOrders = 12; // static number
-
+const CurrentOrdersCard = ({ OrderJson }) => {
+  const orders = use(OrderJson);
+  
   return (
     <>
       <div className="border-4 border-dotted rounded-2xl border-primary p-5">
@@ -11,16 +11,16 @@ const CurrentOrdersCard = () => {
           <ScrollText className="animate-pulse" color="#fcb700" size={100} />
           <div className="text-xl text-center">
             Current Orders
-            <h2 className="text-6xl font-bold">{totalOrders}</h2>
+            <h2 className="text-6xl font-bold">{orders.length}</h2>
           </div>
         </div>
       </div>
       <div className="border-4 border-dotted rounded-2xl border-primary p-5">
         <div className="flex flex-col lg:flex-row items-center justify-between">
-          <CookingPot  className="animate-pulse" color="#fcb700" size={100} />
+          <CookingPot className="animate-pulse" color="#fcb700" size={100} />
           <div className="text-xl text-center">
             Currently Cooking
-            <h2 className="text-6xl font-bold">{totalOrders}</h2>
+            <h2 className="text-6xl font-bold">{}</h2>
           </div>
         </div>
       </div>
@@ -29,7 +29,7 @@ const CurrentOrdersCard = () => {
           <TicketCheck className="animate-pulse" color="#fcb700" size={100} />
           <div className="text-xl text-center">
             Ready To Serve
-            <h2 className="text-6xl font-bold">{totalOrders}</h2>
+            <h2 className="text-6xl font-bold">{}</h2>
           </div>
         </div>
       </div>
