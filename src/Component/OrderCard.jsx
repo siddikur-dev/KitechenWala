@@ -4,7 +4,13 @@ import CurreOrderCard from "./CurreOrderCard";
 import CookingCard from "./CookingCard";
 import ServeCard from "./ServeCard";
 
-const OrderCard = ({ OrderJson, handleOrder, cardOrder }) => {
+const OrderCard = ({
+  OrderJson,
+  handleOrder,
+  cardOrder,
+  handleServe,
+  readyServe,
+}) => {
   const orders = use(OrderJson);
 
   return (
@@ -19,11 +25,19 @@ const OrderCard = ({ OrderJson, handleOrder, cardOrder }) => {
         ))}
       </div>
       <div className="col-span-5 space-y-10">
+        <h2 className="text-3xl font-bold">Cooking Now</h2>
         {cardOrder.map((card) => (
-          <CookingCard order={card} key={card.id}></CookingCard>
+          <CookingCard
+            order={card}
+            key={card.id}
+            handleServe={handleServe}
+          ></CookingCard>
         ))}
-        {/* <CookingCard cardOrder={cardOrder}></CookingCard> */}
-        <ServeCard></ServeCard>
+        <h2 className="text-3xl font-bold">Ready Serve</h2>
+
+        {readyServe.map((serveFood) => (
+          <ServeCard order={serveFood}></ServeCard>
+        ))}
       </div>
     </div>
   );
