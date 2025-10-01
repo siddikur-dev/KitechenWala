@@ -1,7 +1,7 @@
 import React, { use } from "react";
 import { ChefHat, CookingPot, ScrollText, TicketCheck } from "lucide-react";
 
-const CurrentOrdersCard = ({ OrderJson, cardOrder,readyServe }) => {
+const CurrentOrdersCard = ({ OrderJson, cardOrder, readyServe }) => {
   const orders = use(OrderJson);
 
   return (

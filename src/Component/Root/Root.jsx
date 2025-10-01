@@ -11,6 +11,13 @@ const Root = () => {
   const handleOrder = (order) => {
     const newOrder = [...cardOrder, order];
     setCardOrder(newOrder);
+
+    //Check This Order Already Cooked Or Not
+    const isExist = cardOrder.find((item) => item.id === order.id);
+    if (isExist) {
+      alert("Already Cooked");
+      return;
+    }
   };
 
   // ready to serve card show  from cooking card button card data
@@ -32,7 +39,6 @@ const Root = () => {
         ></CurrentOrdersCard>
       </div>
       <OrderCard
-      
         cardOrder={cardOrder}
         handleOrder={handleOrder}
         OrderJson={OrderJson}
