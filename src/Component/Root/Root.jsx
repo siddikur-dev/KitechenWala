@@ -11,16 +11,15 @@ const Root = () => {
   const handleOrder = (order) => {
     const newOrder = [...cardOrder, order];
     setCardOrder(newOrder);
-    console.log(newOrder);
   };
   return (
     <div className="container mx-auto p-4 space-y-10 ">
       <Navbar></Navbar>
       <TitleSection>{"KitchenRoom"}</TitleSection>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-        <CurrentOrdersCard  OrderJson={OrderJson}></CurrentOrdersCard>
+        <CurrentOrdersCard OrderJson={OrderJson}></CurrentOrdersCard>
       </div>
-      <OrderCard handleOrder={handleOrder} OrderJson={OrderJson}></OrderCard>
+      <OrderCard cardOrder={cardOrder} handleOrder={handleOrder} OrderJson={OrderJson}></OrderCard>
     </div>
   );
 };

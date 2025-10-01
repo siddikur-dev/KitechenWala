@@ -1,11 +1,4 @@
-const CookingCard = () => {
-  // Mock data
-  const order = {
-    order_title: "Pasta Alfredo",
-    quantity: 2,
-    special_instruction: "Extra cheese, no garlic",
-  };
-
+const CookingCard = ({ order }) => {
   return (
     <div
       className="rounded-xl p-5 shadow hover:shadow-lg"
