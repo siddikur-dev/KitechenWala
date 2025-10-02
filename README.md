@@ -1,16 +1,50 @@
-# React + Vite
+<h1 align="center">🍴 Kitchen Wala 🍳</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+   <b>A Smart Kitchen Order Management System</b> <br/>
+   <i>Manage Orders ➝ Cook ➝ Serve</i>
+</p>
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&pause=1000&color=FF5733&center=true&vCenter=true&width=500&lines=🍽️+Smart+Kitchen+Workflow;🔥+Cook+Your+Orders+Easily;✅+Serve+With+Just+One+Click;💻+Built+With+React+%26+TailwindCSS" alt="Typing SVG" />
+</p>
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 📋 Browse all orders from **orders.json**
+- 🔥 Send orders to **Cooking section**
+- ✅ Move cooked items to **Ready Serve list**
+- 🧹 Auto-remove from previous list when moved
+- 🎨 Styled with **Tailwind CSS**
+- ⚛️ Built using **React 18**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📂 Project Structure
+
+KITCHENWALA
+│── public/
+│── src/
+│ ├── assets/
+│ ├── Component/
+│ │ ├── Root/
+│ │ │ ├── Root.jsx
+│ │ │ ├── CookingCard.jsx
+│ │ │ ├── CurrentOrdersCard.jsx
+│ │ │ ├── CurreOrderCard.jsx
+│ │ │ ├── Logo.jsx
+│ │ │ ├── Navbar.jsx
+│ │ │ ├── OrderCard.jsx
+│ │ │ ├── ServeCard.jsx
+│ │ │ ├── TitleSection.jsx
+│ ├── App.css
+│ ├── index.css
+│ ├── main.jsx
+│── .gitignore
+│── index.html
+│── package.json
+│── README.md
